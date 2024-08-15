@@ -312,3 +312,226 @@ body {
   .appear-on-scroll.is-visible {
       opacity: 1;
   }
+
+/* General Media Query for Mobile Adjustments */
+@media (max-width: 768px) {
+
+    /* Body and General Padding Adjustments */
+    body {
+        padding: 10px;
+        margin: 0;
+    }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .card-img-top {
+            width: 100%;
+            /* Ensure the image scales to fit within the container */
+            max-width: 300px;
+            /* Limit the max width for small screens */
+        }
+    
+        .card {
+            margin-bottom: 20px;
+            /* Add spacing between the stacked cards */
+        }
+    
+        .col-md-6 {
+            width: 100%;
+            /* Ensure each card takes up full width */
+        }
+    /* Header Section */
+    .header {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+ 
+    /* About Me Section */
+    #sobre-mi {
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+                #servicios {
+                    padding: 20px 10px;
+                    /* Reducir padding para que todo quede más ajustado en móviles */
+                }
+        
+                #servicios h2 {
+                    font-size: 1.8rem;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    /* Ajuste de tamaño del título y centrado en pantallas pequeñas */
+                }
+        
+                #servicios p {
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    /* Ajustar el texto de introducción de los servicios */
+                }
+        
+                .interactive-card {
+                    margin-bottom: 20px;
+                    /* Dar margen inferior a las tarjetas para evitar que se peguen entre sí */
+                }
+        
+                .interactive-card img {
+                    width: auto;
+                    height: auto;
+                    /* Ajustar las imágenes al ancho completo de la tarjeta y mantener la proporción */
+                }
+        
+                /* Hacer que las tarjetas ocupen toda la pantalla en dispositivos pequeños */
+                .col-md-6 {
+                    width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    /* Remover los paddings laterales en móviles */
+                }
+        
+                /* Ajustar el texto dentro de la tarjeta */
+                .interactive-card .card-title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    /* Aseguramos que el título se vea bien en pantallas pequeñas */
+                }
+        
+                .interactive-card .card-text {
+                    font-size: 1rem;
+                    text-align: center;
+                    /* Ajuste del tamaño del texto de las tarjetas */
+                }
+        
+                .interactive-card .btn {
+                    display: block;
+                    width: 100%;
+                    margin-top: 15px;
+                    /* Hacer que el botón ocupe todo el ancho disponible y darle un margen superior */
+                }
+    
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+    
+        .card-body p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+    
+        /* Ajustar botón de la tarjeta */
+        .btn-primary {
+            font-size: 1rem;
+            padding: 10px 20px;
+            width: 100%;
+        }
+    
+        /* Contacto Section */
+        #contacto {
+            padding: 20px 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    
+        /* Asegurar que el formulario se vea bien en pantallas pequeñas */
+        #contacto .form-control {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+    
+        /* Ajustar botón del formulario */
+        #contacto .btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+        }
+    
+        /* Ajustes de espacio entre elementos en la sección de contacto */
+        #contacto .contact-info {
+            margin-bottom: 20px;
+        }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding: 1rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    /* Photo Container */
+    .photo-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .photo-overlay {
+        font-size: 1rem;
+    }
+
+        .d-flex {
+            flex-direction: column;
+            /* Stack buttons vertically on small screens */
+            align-items: center;
+            /* Center the buttons */
+        }
+    
+        .btn-social {
+            width: 100%;
+            /* Make buttons take full width */
+            max-width: 300px;
+            /* Limit max width so buttons don't get too wide */
+            margin-bottom: 10px;
+            /* Add bottom margin between buttons */
+            font-size: 1.15rem;
+            /* Adjust font size slightly */
+        }
+    
+        
+
+    /* Forms */
+    .form-control {
+        padding: 10px 15px;
+    }
+
+    /* Adjust the form button */
+    .btn-primary {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+}
