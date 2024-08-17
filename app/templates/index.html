@@ -26,14 +26,14 @@
             <div class="cards-container">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Servicios de Herencias</h5>
+                        <h5 class="card-title">Asesoramiento sobre Herencias</h5>
                         <p class="card-text">Conoce más sobre nuestros servicios especializados en herencias.</p>
                         <a href="#servicios" class="btn btn-primary">Ver Herencias</a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Servicios de Particiones</h5>
+                        <h5 class="card-title">Asesoramiento sobre Particiones</h5>
                         <p class="card-text">Descubre cómo podemos ayudarte con la partición de bienes.</p>
                         <a href="#servicios" class="btn btn-primary">Ver Particiones</a>
                     </div>
@@ -43,7 +43,15 @@
     </div>
 </header>
 
-
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }} mt-4" role="alert">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
 
 <!-- Main Content with Equal Height Columns -->
 <div class="container my-5">
@@ -57,7 +65,7 @@
                         <!-- Professional Photo -->
                         <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
                             <div class="photo-container">
-                                <img src="{{ url_for('static', filename='img/pedro-robles.png') }}" alt="Pedro Robles Latorre">
+                                <img src="{{ url_for('static', filename='img/pedro-robles.jpg') }}" alt="Pedro Robles Latorre">
                                 <div class="photo-overlay">Pedro Robles Latorre</div>
                             </div>
                         </div>
@@ -66,19 +74,19 @@
                         <div class="col-md-8 d-flex align-items-center">
                             <div class="details-container ml-md-4 mt-3 mt-md-0">
                                 <h2 class="display-4 font-weight-bold ">Pedro Robles Latorre</h2>
-                                <p class="text-muted">Consultor Jurídico desde 2023</p>
+                                <p class="text-muted">Consultor Jurídico</p>
                                 <p><i class="fas fa-map-marker-alt "></i> Madrid</p>
-                                <p>Colegiado n.º 15906 del Ilustre Colegio de Abogados de Valencia</p>
-                                <p><a href="tel:+34915860646" class="text-primary"><i class="fas fa-phone"></i> +34 915 860 646</a></p>
+                                <p>Colegiado n.º 89.822 del Ilustre Colegio de Abogados de Madrid</p>
+                                <p><a href="tel:+34915860646" class="text-primary"><i class="fas fa-phone"></i> +34 659996043</a></p>
                                 <p><a href="mailto:pedro.robles@juridico.com" class="text-primary"><i class="fas fa-envelope"></i>
-                                        pedro.robles@juridico.com</a></p>
+                                        pedro.robles@estudiojuridicoprl.es</a></p>
                                 <a href="{{ url_for('static', filename='docs/CV_Pedro_Robles.pdf') }}" class="btn btn-outline-primary my-3"><i
                                         class="fas fa-file-pdf"></i> Descargar CV (PDF)</a>
                                 <div class="mt-4">
                                     <h4 class="font-weight-bold ">Principales Áreas de Práctica</h4>
                                     <p class="mb-2">Herencias y Sucesiones</p>
                                     <h4 class="font-weight-bold ">Idiomas</h4>
-                                    <p class="mb-0">Español, Inglés</p>
+                                    <p class="mb-0">Español, Francés</p>
                                 </div>
                             </div>
                         </div>
@@ -100,9 +108,10 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h4 class="timeline-title">PRL Estudio Jurídico</h4>
-                            <p class="text-muted">Fundador y Consultor Jurídico | 2023 - Actualidad</p>
-                            <p>Fundé PRL Estudio Jurídico para ofrecer servicios especializados en herencias y sucesiones.
-                                Lidero un equipo dedicado a proporcionar asesoramiento legal personalizado a nuestros clientes.
+                            <p class="text-muted">Fundador | 2024 - Actualidad</p>
+                            <p>Soy profesor de Derecho civil desde el año 1995 y he compatibilizado la docencia con la asesoría jurídica desde entonces. He participado como perito en procedimientos juciales en materia de derecho sucesorio. 
+                                He sido responsable de la resolución de casos complejos de herencias, particiones de bienes y resoluciones de conflictos familiares.
+                                Desarrollo estrategias legales preventivas para evitar conflictos sucesorios y familiares.
                             </p>
                         </div>
                     </div>
@@ -110,20 +119,29 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Bufete López & Asociados</h4>
-                            <p class="text-muted">Abogado Especialista en Sucesiones | 2016 - 2023</p>
-                            <p>Trabajé en casos complejos de herencias, particiones de bienes, y resolución de conflictos
-                                familiares. Desarrollé estrategias legales efectivas para la planificación sucesoria.</p>
+                            <h4 class="timeline-title">Profesor de Derecho Civil</h4>
+                            <p class="text-muted">Profesor Catedrático de Derecho Civil de la Universidad San Pablo CEU | 2019 - Actualidad</p>
+                            <p>Profesor titular de derecho civil de la Universidad San Pablo CEU 2005-2019</p>
+                            <p class="text-muted">Profesor titular de Derecho civil en la Universidad de Granada | 2003-2005
+                            <p class="text-muted">Doctorado en Derecho civil con la tesis titulada La partición convencional y su impugnación que obtuvo el premio
+                            extraordinario | 1990-1995</p>
+                            <p>hfuiasnuid</p>
+                            <p> Profesor asociado de Derecho civil en la Universidad de Granada 1995-2003</p>
+                            
+                            
+            
+                    </p>
                         </div>
                     </div>
                     <!-- Timeline Item 3 -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h4 class="timeline-title">Abogados Martínez y Asociados</h4>
-                            <p class="text-muted">Asociado Junior | 2010 - 2016</p>
-                            <p>Comencé mi carrera profesional como abogado junior, especializándome en derecho de sucesiones.
-                                Colaboré en casos de planificación patrimonial y asesoría legal.</p>
+                            <h4 class="timeline-title">Asesor jurídico</h4>
+                            <p class="text-muted">Colaboré con el Despacho de Abogados Alcón 1997-2000
+                            <p class="text-muted">Asesoro realizando dictámenes en materias de Derecho civil a importantes despachos nacionales
+                            <p class="text-muted"></p>He participado como testigo perito en procedimientos judiciales en materia de derecho sucesorio
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +166,7 @@
                         <h5 class="text-muted">Catedrático de Derecho Civil y Consultor Jurídico</h5>
                         <p class="text-justify mt-3 text-dark">Soy un catedrático de Derecho Civil con una vasta experiencia en la
                             enseñanza y la consultoría jurídica. He dedicado mi carrera a la formación de futuros juristas, así como
-                            a la investigación y redacción de artículos académicos clave en el ámbito del derecho de sucesiones. Mi
+                            a la investigación y redacción de artículos académicos en el ámbito del derecho civil y en especial en materia de sucesiones. Mi
                             trato cercano y enfoque pedagógico han marcado la diferencia en la vida de mis alumnos y clientes.</p>
                     </div>
                 </div>
@@ -244,7 +262,7 @@
                     <div class="col-md-6">
                         <div class="card interactive-card">
                             <img src="{{ url_for('static', filename='img/patrimony.png') }}" class="card-img-top"
-                                alt="Servicios de Herencias" style="width:350px">
+                                alt="Servicios de Herencias" style="width:400px">
                             <div class="card-body">
                                 <h3 class="card-title">Asesoramiento en Herencias</h3>
                                 <p class="card-text">Ofrecemos asesoramiento experto en la planificación y gestión de
@@ -260,7 +278,7 @@
                     <div class="col-md-6">
                         <div class="card interactive-card">
                             <img src="{{ url_for('static', filename='img/lawicon.png') }}" class="card-img-top"
-                                alt="Servicios de Particiones" style="width:350px">
+                                alt="Servicios de Particiones" style="width:400px">
                             <div class="card-body">
                                 <h3 class="card-title">Gestión de Particiones</h3>
                                 <p class="card-text">Gestionamos el proceso de partición de bienes, asegurando una
@@ -333,11 +351,11 @@
                             </li>
                         </ul>
                     </div>
-            
+                    
                     <!-- Formulario de Contacto -->
                     <div class="col-md-6">
                         <h4 class="font-weight-bold text-dark">Envíame un Mensaje</h4>
-                        <form action="#" method="post" class="mt-4">
+                        <form action="{{ url_for('contacto') }}" method="post" class="mt-4">
                             <div class="form-group">
                                 <label for="nombre" class="text-dark">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -354,12 +372,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="mensaje" class="text-dark">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
-                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                                    required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Mensaje</button>
                         </form>
                     </div>
+                    
                 </div>
             </div>
 

@@ -68,6 +68,66 @@ def herencia():
 
     return render_template('herencia.html')
 
+@app.route('/contacto', methods=['GET', 'POST'])
+def contacto():
+    if request.method == 'POST':
+        # Recoge la información del formulario
+        nombre = request.form['nombre']
+        email = request.form['email']
+        asunto = request.form['asunto']
+        mensaje = request.form['mensaje']
+
+        # Construir el mensaje de correo
+        access_token = get_access_token()  # Asegúrate de que tienes una función para obtener el token
+        email_data = {
+            "message": {
+                "subject": f"Nuevo Mensaje de Contacto: {asunto}",
+                "body": {
+                    "contentType": "Text",
+                    "content": f"""
+                    Has recibido un nuevo mensaje de contacto:
+
+                    Nombre: {nombre}
+                    Email: {email}
+
+                    Asunto: {asunto}
+                    Mensaje:
+                    {mensaje}
+
+                    Este mensaje fue enviado desde el formulario de contacto en el sitio web.
+                    """
+                },
+                "toRecipients": [
+                    {
+                        "emailAddress": {
+                            "address": "pedro.robles@estudiojuridicoprl.es"
+                        }
+                    }
+                ]
+            }
+        }
+
+        try:
+            # Enviar el correo usando Microsoft Graph API
+            response = requests.post(
+                "https://graph.microsoft.com/v1.0/users/pedro.robles@estudiojuridicoprl.es/sendMail",  
+                headers={
+                    "Authorization": f"Bearer {access_token}",
+                    "Content-Type": "application/json"
+                },
+                json=email_data
+            )
+            response.raise_for_status()
+            flash('Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo pronto.', 'success')
+        except requests.exceptions.HTTPError as err:
+            # Capturar y mostrar el error
+            error_message = err.response.json().get("error", {}).get("message", str(err))
+            flash(f'No se pudo enviar el correo electrónico. Error: {error_message}', 'danger')
+
+        return render_template('index.html')
+
+    return render_template('index.html')
+
 
 @app.route('/particiones', methods=['GET', 'POST'])
 def particiones():
