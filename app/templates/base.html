@@ -14,7 +14,6 @@
     <link rel="icon" href="/static/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="{{ url_for('static', filename='js/cookies.js') }}"></script>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/banner.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
@@ -76,7 +75,7 @@
 
     {% block content %}{% endblock %}
     
-    <div class="cookie-consent card bg-dark text-white fixed-bottom mx-auto mb-3 shadow-lg" id="cookieConsent"
+    <div class="cookie-consent  bg-dark text-white mx-auto mb-3 shadow-lg" id="cookieConsent"
         style="max-width: 500px; display: none;">
         <div class="card-body text-center">
             <p class="mb-3">
