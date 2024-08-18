@@ -157,18 +157,18 @@
                         <div class="timeline-content">
                             <h4 class="timeline-title">Experiencia Internacional</h4>
                             <p class="flag-icons">
-                                <img src="path_to_france_flag.png" alt="France" style="width:20px;height:auto;">
-                                <img src="path_to_italy_flag.png" alt="Italy" style="width:20px;height:auto;">
-                                <img src="path_to_chile_flag.png" alt="Chile" style="width:20px;height:auto;">
-                                <img src="path_to_argentina_flag.png" alt="Argentina" style="width:20px;height:auto;">
+                                <span class="fi fi-fr" title="France"></span>
+                                <span class="fi fi-it" title="Italy"></span>
+                                <span class="fi fi-cl" title="Chile"></span>
+                                <span class="fi fi-ar" title="Argentina"></span>
                             </p>
                             <p class="text-muted">Profesor con amplia experiencia internacional</p>
-                            <p >
+                            <p>
                                 He impartido clases en diversos programas internacionales, incluyendo el máster notarial de las
                                 universidades París 1 y París 2. Además, he sido profesor invitado en la Universidad de verano organizada
                                 por la Fondation pour le Droit Continental.
                             </p>
-                            <p >
+                            <p>
                                 También he impartido clases en prestigiosas universidades italianas, como las de Turín, Florencia, Roma y
                                 Lecce. Mi experiencia internacional se extiende a América Latina, donde he sido profesor invitado en la
                                 Universidad Diego Portales, Universidad de Los Andes y Universidad del Desarrollo en Chile, así como en la
@@ -176,6 +176,7 @@
                             </p>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -333,9 +334,9 @@
                     </div>
                 </div>
             
-                <div class="row">
+                <div class="row justify-content-center">
                     <!-- Redes Sociales -->
-                    <div class="col-12 mb-5 text-center">
+                    <div class="col-md-4 mb-5 text-center">
                         <h4 class="font-weight-bold text-dark">Conéctate Conmigo</h4>
                         <p class="text-dark mb-4">Sígueme en redes sociales para estar al tanto de las últimas novedades y
                             artículos:</p>
@@ -344,27 +345,24 @@
                                 title="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i> LinkedIn
                             </a>
-                           
                         </div>
                     </div>
-                </div>
             
-                <div class="row">
                     <!-- Información de Contacto -->
-                    <div class="col-md-6 mb-5">
+                    <div class="col-md-4 mb-5">
                         <h4 class="font-weight-bold text-dark">Información de Contacto</h4>
                         <p class="text-dark">Puedes ponerte en contacto conmigo a través de cualquiera de los siguientes medios:</p>
                         <ul class="list-unstyled text-dark">
-                            <li class="mb-2">
-                                <i class="fas fa-envelope text-primary"></i> Email: <a href="mailto:contacto@prljuridico.com"
-                                    class="text-dark">pedro.robles@estudiojuridicoprl.es</a>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope text-primary"></i>
+                                <span>Email:</span>
+                                <a href="mailto:contacto@prljuridico.com" class="text-dark">pedro.robles@estudiojuridicoprl.es</a>
                             </li>
-                            
                         </ul>
                     </div>
-                    
+            
                     <!-- Formulario de Contacto -->
-                    <div class="col-md-6">
+                    <div class="col-md-10">
                         <h4 class="font-weight-bold text-dark">Envíame un Mensaje</h4>
                         <form action="{{ url_for('contacto') }}" method="post" class="mt-4">
                             <div class="form-group">
@@ -383,15 +381,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="mensaje" class="text-dark">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
-                                    required></textarea>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Mensaje</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
                         </form>
                     </div>
-                    
                 </div>
             </div>
+
 
         </div>
     </div>

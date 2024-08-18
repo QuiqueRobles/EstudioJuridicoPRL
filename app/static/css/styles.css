@@ -444,28 +444,74 @@ body {
     
         /* Contacto Section */
         #contacto {
-            padding: 20px 10px;
+            padding: 40px 15px;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 12px;
+            background-color: #f8f9fa;
         }
-    
-        /* Asegurar que el formulario se vea bien en pantallas pequeñas */
+
+        /* Formulario Contacto */
         #contacto .form-control {
             width: 100%;
             margin-bottom: 15px;
-            padding: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
         }
-    
-        /* Ajustar botón del formulario */
+
+        #contacto .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Ajustar el botón del formulario */
         #contacto .btn-primary {
             width: 100%;
-            padding: 12px;
-            font-size: 1rem;
+            padding: 15px;
+            font-size: 1.1rem;
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-    
-        /* Ajustes de espacio entre elementos en la sección de contacto */
+
+        #contacto .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Redes Sociales */
+        #contacto .btn-social {
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #contacto .btn-social i {
+            margin-right: 8px;
+        }
+
+        /* Información de Contacto */
         #contacto .contact-info {
             margin-bottom: 20px;
+        }
+
+        #contacto .contact-info i {
+            margin-right: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #contacto .btn-social {
+                margin-bottom: 15px;
+            }
         }
 
     /* Footer */
@@ -534,4 +580,24 @@ body {
         padding: 12px 15px;
     }
 
+}
+
+.flag-icons .fi {
+    font-size: 24px;
+    /* Increase the size of the flags */
+    border-radius: 3px;
+    /* Add subtle rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Add a soft shadow */
+    margin-right: 8px;
+    /* Add space between flags */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth hover effect */
+    vertical-align: middle;
+    /* Align flags vertically centered */
+}
+
+.flag-icons .fi:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the flag on hover */
 }

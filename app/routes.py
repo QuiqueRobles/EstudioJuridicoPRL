@@ -6,6 +6,10 @@ import requests
 def index():
     return render_template('index.html')
 
+@app.route('/politica_datos')
+def politica_datos():
+    return render_template('politica_datos.html')
+
 @app.route('/herencia', methods=['GET', 'POST'])
 def herencia():
     if request.method == 'POST':
