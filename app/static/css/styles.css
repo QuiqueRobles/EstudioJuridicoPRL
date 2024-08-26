@@ -321,7 +321,10 @@ body {
         padding: 10px;
         margin: 0;
     }
-
+        header.wrapper {
+            height: 1300px;
+        }
+        
         .row {
             display: flex;
             flex-direction: column;
@@ -667,3 +670,5 @@ body {
         padding: 8px 16px;
     }
 }
+
+
