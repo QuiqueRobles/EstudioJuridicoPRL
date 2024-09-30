@@ -536,17 +536,7 @@ body {
         padding: 1rem;
     }
 
-    /* Photo Container */
-    .photo-container {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .photo-container img {
-        width: 100%;
-        height: auto;
-    }
+  
 
     .photo-overlay {
         font-size: 1rem;
@@ -698,6 +688,7 @@ body {
         padding: 20px;
     }
 
+    
     /* Sections */
     #sobre-mi,
     #servicios,
