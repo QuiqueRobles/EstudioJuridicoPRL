@@ -1,10 +1,15 @@
 from flask import render_template, request, flash, redirect, url_for, current_app as app
+from flask import send_from_directory
 import msal
 import requests
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/sitemap.xml')
+def sitemap():  
+    return send_from_directory(app.static_folder, 'sitemap.xml')
 
 @app.route('/politica_datos')
 def politica_datos():
